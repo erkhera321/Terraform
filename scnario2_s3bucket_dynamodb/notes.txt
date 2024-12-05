@@ -9,4 +9,23 @@ Partition key = LockID (without gap)
 
  - Do terraform init or terraform init -reconfigure
 
+ - Enable versioning and encryption while creating s3 bucket
+
+ Resource blocks to create dynamo db table 
+    aws_dynamodb_table
+Resource blocks to create s3 bucket 
+    aws_s3_bucket
+
+To see lock state 
+- make some changes in main.tf or terraform.tfvars any value
+- terraform plan 
+- terraform apply 
+- in terminal shows acquiring lock state
+- s3 bucket tfstate file will be updated
+- now again hit apply it will create another entry in s3 bucket
+- 2 entries in s3 bucket 
+  1. terraform.tfstate digest
+  2. terraform.tfstate (this will be deleted once the aply is complete) 
+
+
  
