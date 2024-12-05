@@ -1,0 +1,7 @@
+1) terraform init
+2) terraform plan -out=planfilename   (The terraform plan -out command in Terraform is used to create an execution plan and save it to a specified file. 
+This file can later be used with the terraform apply command to execute the exact changes planned without needing to re-create the plan. )
+3) terraform apply tfplanfilename
+4) terraform destroy
+
+terraform apply -var-file="custom.tfvars"

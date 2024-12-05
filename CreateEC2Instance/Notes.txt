@@ -1,0 +1,22 @@
+Problem statement: Creating new EC2 instance with tfstate locally
+
+Basic steps:
+aws configure -> access key and secret key
+provider block
+main.tf -> resource code for EC2 instance 
+variables.tf -> define variable
+dev.tfvars
+.gitignore
+
+Steps to create Access key and Secret key
+- Login to AWS Managememt root user console
+- Go to IAM> Create User group with Admin access
+- Create user under this user group
+- Now create access key and secret key for the user 
+- Note down the access key, secret key and aws console url for the user
+
+For aws provider version
+
+https://registry.terraform.io/providers/hashicorp/aws/latest/docs
+
+
