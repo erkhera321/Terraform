@@ -1,0 +1,12 @@
+- Create S3 bucket on console
+- s3 bucket name should be unique globally
+- Do terraform init to initialize the directory with s3 bucket details
+
+- Create dynamoDB in console
+Partition key = LockID (without gap)
+- In backend.tf add 
+ dynamodb_table = "tablename"
+
+ - Do terraform init or terraform init -reconfigure
+
+ 
