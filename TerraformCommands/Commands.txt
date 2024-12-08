@@ -1,7 +1,18 @@
 1) terraform init
+A hidden directory is created .terraform. It contains provider and plugin
+Another file created terraform.lock.hcl to store privider selections made
+
 2) terraform plan -out=planfilename   (The terraform plan -out command in Terraform is used to create an execution plan and save it to a specified file. 
 This file can later be used with the terraform apply command to execute the exact changes planned without needing to re-create the plan. )
-3) terraform apply tfplanfilename
+3) terraform apply planfilename
 4) terraform destroy
 
-terraform apply -var-file="custom.tfvars"
+terraform apply planfilename
+
+terraform plan -out=planfilename -var-file="custom.tfvars"
+
+- If you provide the tfvars file name in terraform plan then no need to mention tfvars file name in terraform apply again
+- If you do terraform plan with out and plan file name then you run terraform apply with that file name, 
+it will not ask for approval again. 
+
+terraform import <resource-type.resourcename> <resource-id>

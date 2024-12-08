@@ -1,0 +1,10 @@
+steps:
+1. create resource block with instance type and name
+2. create the resource in aws in this case EC2 instance
+3. now run terraform import command. it will create the tfstate file.
+
+terraform import <resource-type.resourcename> <resource-id>
+4. Then add the mandatory arguments in the terraform code like ami and instance type here
+5. Run terraform plan and apply
+6. it will not show any changes as everything is now in sync
+
